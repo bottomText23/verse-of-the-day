@@ -1,1 +1,0 @@
-# verse-of-the-day

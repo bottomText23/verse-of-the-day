@@ -33,10 +33,12 @@ def add_text(words, img):
     quote = "\n".join(lines) #text string separated by new line
 
     x_pos = (img.size[0] - max_width) / 2 #x starting coord of text
-    y_pos = img.size[1]
+
+    y_pos = img.size[1] #y starting coord of text
     for l in lines:
         y_pos -= (space + font_size + (3 * 2))
     y_pos -= x_pos - space
+    if y_pos >= img.size[1] * 0.75: y_pos = img.size[1] * 0.75 #adjust if low
 
     draw = ImageDraw.Draw(img)
     draw.text((x_pos, y_pos), quote, font=text_font, spacing=space, fill="white", stroke_width=3, stroke_fill="black")

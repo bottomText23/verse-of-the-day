@@ -1,4 +1,4 @@
-from os import walk
+from os import listdir
 import random
 import time
 from PIL import Image
@@ -6,13 +6,14 @@ from scraper import scrape
 from img_writer import add_text
 
 pictures = []
-for _, _, filenames in walk("pictures/"):
-    for name in filenames:
-        if name.startswith("holo"):
-            pictures.append(name)
+for name in listdir("pictures/"):
+    pictures.append(name)
 
 i = random.randint(0, len(pictures) - 1)
 img = Image.open("pictures/" + pictures[i])
 
-words = scrape()
-add_text(words, img)
+try:
+    words = scrape()
+    add_text(words, img)
+except:
+    print("An error occurred :( check your internet connection.")

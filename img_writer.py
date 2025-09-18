@@ -43,4 +43,4 @@ def add_text(words, img):
     draw = ImageDraw.Draw(img)
     draw.text((x_pos, y_pos), quote, font=text_font, spacing=space, fill="white", stroke_width=3, stroke_fill="black")
 
-    img.save("pictures/test.png")
+    img.save("verse_of_the_day.png")

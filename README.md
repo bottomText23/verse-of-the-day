@@ -2,7 +2,7 @@
 
 <img src="assets/banner.jpg" width="500px">
 
-Puts a daily Bible verse on an image of Holo from _Spice and wolf_.
+Puts a daily Bible verse on an image of Holo from _Spice and Wolf_.
 
 The verses are sourced from [verseoftheday.com](https://www.verseoftheday.com/), so you will need an internet connection for the script to work.
 

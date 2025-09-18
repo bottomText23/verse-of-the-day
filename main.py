@@ -5,12 +5,14 @@ from PIL import Image
 from scraper import scrape
 from img_writer import add_text
 
+directory = "assets/pictures/"
+
 pictures = []
-for name in listdir("pictures/"):
+for name in listdir(directory):
     pictures.append(name)
 
 i = random.randint(0, len(pictures) - 1)
-img = Image.open("pictures/" + pictures[i])
+img = Image.open(directory + pictures[i])
 
 try:
     words = scrape()

@@ -1,4 +1,4 @@
-# Daily Bible verse
+# Bible verse of the day
 
 <img src="assets/banner.jpg" width="500px">
 

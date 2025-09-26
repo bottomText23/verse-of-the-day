@@ -14,8 +14,8 @@ for name in listdir(directory):
 i = random.randint(0, len(pictures) - 1)
 img = Image.open(directory + pictures[i])
 
-try:
-    words = scrape()
-    add_text(words, img)
-except:
-    print("An error occurred :( check your internet connection.")
+#try:
+words = scrape()
+add_text(words, img)
+#except:
+#    print("An error occurred :( check your internet connection.")
